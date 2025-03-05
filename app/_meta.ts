@@ -19,4 +19,9 @@ export default {
     title: "RKTK Client",
     href: "https://rktk-client.nazo6.dev",
   },
+  link_rustdoc: {
+    type: "page",
+    title: "API docs",
+    href: "https://rktk-docs.nazo6.dev",
+  },
 } satisfies MetaRecord;
