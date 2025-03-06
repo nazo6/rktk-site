@@ -3,6 +3,8 @@ import { Banner, Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 
+import "./global.css";
+
 export const metadata = {
   // Define your metadata here
   // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
@@ -15,7 +17,12 @@ const banner = (
 );
 const navbar = (
   <Navbar
-    logo={<b>RKTK</b>}
+    logo={
+      <h1 className="inline-flex justify-center items-center gap-2">
+        <img src="/logo.webp" className="w-10 h-10 object-cover align-middle" />
+        <p className="text-3xl font-bold top-1">RKTK</p>
+      </h1>
+    }
     projectLink="https://github.com/nazo6/rktk"
   />
 );
