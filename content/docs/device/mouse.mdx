@@ -2,11 +2,25 @@
 title: Mouse
 ---
 
+Mouse drivers are used to control optical mice. They provide an interface for reading the mouse's position and button states, allowing you to implement mouse functionality in your applications.
+
 ## Driver list
 
 ### Common
 
-|         |                                                                                                          |
-| ------- | -------------------------------------------------------------------------------------------------------- |
-| PMW3360 | [docs](https://docs.rs/rktk-drivers-common/latest/rktk_drivers_common/mouse/pmw3360/struct.Pmw3360.html) |
-| PAW3395 | [docs](https://docs.rs/rktk-drivers-common/latest/rktk_drivers_common/mouse/paw3395/struct.Paw3395.html) |
+<DriversTable
+  def={[
+    {
+      name: "PMW3360",
+      crate: "rktk-drivers-common",
+      path: "mouse/pmw3360",
+      description: "Pixart PMW3360 optical mouse driver",
+    },
+    {
+      name: "PAW3395",
+      crate: "rktk-drivers-common",
+      path: "mouse/paw3395",
+      description: "Pixart PAW3395 optical mouse driver",
+    },
+  ]}
+/>

@@ -1,0 +1,42 @@
+---
+title: Reporter
+---
+
+Reporter drivers are used to send data from the device to the host. This can be done over USB, BLE, or other protocols.
+
+## Driver list
+
+### Common
+
+<DriversTable
+  def={[
+    {
+      name: "USB (embassy)",
+      crate: "rktk-drivers-common",
+      path: "usb",
+      description:
+        "USB reporter Driver based on embassy-usb. Can be used with any platform that embassy-usb's driver is implemented.",
+    },
+  ]}
+/>
+
+### nRF
+
+<DriversTable
+  def={[
+    {
+      name: "BLE (softdevice)",
+      crate: "rktk-drivers-nrf",
+      path: "softdevice",
+      description:
+        "BLE reporter driver based on the nRF softdevice. Can be used with any nRF platform.",
+    },
+    {
+      name: "2.4GHz ESB",
+      crate: "rktk-drivers-nrf",
+      path: "esb/reporter",
+      description:
+        "Reports to other nRF device connected to PC using proprietary ESB protocol.",
+    },
+  ]}
+/>

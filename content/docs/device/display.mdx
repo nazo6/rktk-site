@@ -1,3 +1,20 @@
 ---
 title: Display
 ---
+
+Display drivers are used to control various types of displays, such as OLED, LCD, and e-paper displays. They provide an interface for sending data and commands to the display, allowing you to render graphics, text, and other visual elements.
+
+## Driver list
+
+### Common
+
+<DriversTable
+  def={[
+    {
+      name: "SSD1306",
+      crate: "rktk-drivers-common",
+      path: "display/ssd1306",
+      description: "SSD1306 OLED display driver",
+    },
+  ]}
+/>

@@ -1,0 +1,21 @@
+---
+title: Dongle
+---
+
+Dongle is usually connected to a computer via USB. It receives data from the wireless keyboard and sends it to the host. It can also be used to send data from the host to the keyboard.
+
+## Driver list
+
+### nRF
+
+<DriversTable
+  def={[
+    {
+      name: "2.4GHz ESB",
+      crate: "rktk-drivers-nrf",
+      path: "esb/dongle",
+      description:
+        "Received 2.4GHz ESB Reporter data from the keyboard and sends it to the host. It is intended to use with keyboard that has ESB reporter driver.",
+    },
+  ]}
+/>

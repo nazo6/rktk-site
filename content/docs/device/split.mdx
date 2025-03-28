@@ -2,17 +2,38 @@
 title: Split
 ---
 
+Split drivers are used to control devices that require a split connection, such as TRRS or TRS connections.
+
 ## Driver list
 
 ### nRF
 
-| Name             | Docs                                                                                               | Description                     |
-| ---------------- | -------------------------------------------------------------------------------------------------- | ------------------------------- |
-| UART full-duplex | [link](https://docs.rs/rktk-drivers-nrf/latest/rktk_drivers_nrf/split/uart_half_duplex/index.html) | Uses two pins and TRRS cable    |
-| UART half-duplex | [link](https://docs.rs/rktk-drivers-nrf/latest/rktk_drivers_nrf/split/uart_half_duplex/index.html) | Uses only one pin and TRS cable |
+<DriversTable
+  def={[
+    {
+      name: "UART full-duplex",
+      crate: "rktk-drivers-nrf",
+      path: "split/uart_full_duplex",
+      description: "Uses two pins and TRRS cable",
+    },
+    {
+      name: "UART half-duplex",
+      crate: "rktk-drivers-nrf",
+      path: "split/uart_half_duplex",
+      description: "Uses only one pin and TRS cable",
+    },
+  ]}
+/>
 
 ### RP
 
-| Name            | Docs                                                                                               | Description                |
-| --------------- | -------------------------------------------------------------------------------------------------- | -------------------------- |
-| PIO half-duplex | [link](https://docs.rs/rktk-drivers-nrf/latest/rktk_drivers_nrf/split/uart_half_duplex/index.html) | Uses onw pin and TRS cable |
+<DriversTable
+  def={[
+    {
+      name: "UART half-duplex",
+      crate: "rktk-drivers-rp",
+      path: "split/uart_half_duplex",
+      description: "Uses only one pin and TRS cable",
+    },
+  ]}
+/>
