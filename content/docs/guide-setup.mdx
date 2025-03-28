@@ -11,25 +11,18 @@ Rust, but using [rustup](https://rustup.rs/) is recommended.
 
 After install rust, make sure that the `cargo` command is available.
 
-## 2. Install cargo-binutils
+## 3. Install `uf2deploy`
 
-Next, install [cargo-binutils](https://github.com/rust-embedded/cargo-binutils).
-This is needed to generate UF2 files.
+[`uf2deploy`](https://github.com/nazo6/uf2deploy) is a command line tool to
+convert ELF binary which is produced by rust compiler to UF2 file, which is
+common for flashing.
 
-```sh
-cargo install cargo-binutils
-# or if you have cargo-binstall
-cargo binstall cargo-binutils
+Also, this tools can be set as
+[cargo runner](https://doc.rust-lang.org/cargo/reference/config.html#targettriplerunner).
+By setting this, you can just `cargo run` to compile and deploy to device.
 
-rustup component add llvm-tools
-```
-
-## 3. Install rktk-cli
-
-`rktk-cli` is command line interface for RKTK. It can be installed by cargo.
+You can install `uf2deploy` with the following command:
 
 ```sh
-cargo +nightly install rktk-cli --git https://github.com/nazo6/rktk --bin rktk-cli
+cargo install uf2deploy
 ```
-
-Note that `rktk-cli` requires nightly toolchain.

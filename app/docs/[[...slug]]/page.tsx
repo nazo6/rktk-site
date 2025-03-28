@@ -27,6 +27,7 @@ export default async function Page(props: {
         path: `content/docs/${page.file.path}`,
         sha: "master",
       }}
+      lastUpdate={page.data.lastModified}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
