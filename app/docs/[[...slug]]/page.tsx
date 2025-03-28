@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 import defaultMdxComponents, { createRelativeLink } from "fumadocs-ui/mdx";
 import { BiLinkExternal } from "react-icons/bi";
 import clsx from "clsx";
-import { ComponentProps, FC } from "react";
+import { ComponentProps } from "react";
 import FumaLink from "fumadocs-core/link";
 
 function LinkWithExternalIcon(
