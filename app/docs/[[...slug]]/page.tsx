@@ -7,6 +7,8 @@ import {
 } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import defaultMdxComponents, { createRelativeLink } from "fumadocs-ui/mdx";
+import { BiLinkExternal } from "react-icons/bi";
+import clsx from "clsx";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -35,9 +37,21 @@ export default async function Page(props: {
         <MDXContent
           components={{
             ...defaultMdxComponents,
-            // this allows you to link to other pages with relative file paths
-            a: createRelativeLink(source, page),
-            // you can add other MDX components here
+            a: ({ href, children, ...props }) => {
+              const isExternal = /^https?:\/\//.test(href);
+              const BaseLink = createRelativeLink(source, page);
+
+              return (
+                <BaseLink
+                  href={href}
+                  {...props}
+                  className={clsx("inline-flex items-center", props.className)}
+                >
+                  {children}
+                  {isExternal && <BiLinkExternal />}
+                </BaseLink>
+              );
+            },
           }}
         />
       </DocsBody>
