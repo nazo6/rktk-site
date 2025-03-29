@@ -8,14 +8,10 @@ Storage drivers are used to manage data storage on devices. They provide an inte
 
 ### Common
 
-<DriversTable
-  def={[
-    {
-      name: "Flash (sequential-storage)",
-      crate: "rktk-drivers-common",
-      path: "storage/flash_sequential_map",
-      description:
-        "General storage driver that can be used with any platform that has embedded_storage_async implementation.",
-    },
-  ]}
-/>
+:::drivers_table
+
+| name                       | crate               | path                         | description                                                                                               |
+| -------------------------- | ------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Flash (sequential-storage) | rktk-drivers-common | storage/flash_sequential_map | General storage driver that can be used with any platform that has embedded_storage_async implementation. |
+
+:::

@@ -12,23 +12,12 @@ matrix, all of which are provided as official drivers.
 
 ### Common
 
-<DriversTable
-  def={[
-    {
-      name: "Matrix",
-      crate: "rktk-drivers-common",
-      path: "keyscan/matrix",
-      description: "Normal matrix",
-    },
-    {
-      name: "Duplex-Matrix",
-      crate: "rktk-drivers-common",
-      path: "keyscan/duplex_matrix",
-    },
-    {
-      name: "Matrix with shift register",
-      crate: "rktk-drivers-common",
-      path: "keyscan/shift_register_matrix",
-    },
-  ]}
-/>
+:::drivers_table
+
+| name                       | crate               | path                          | description                |
+| -------------------------- | ------------------- | ----------------------------- | -------------------------- |
+| Matrix                     | rktk-drivers-common | keyscan/matrix                | Normal matrix              |
+| Duplex-Matrix              | rktk-drivers-common | keyscan/duplex_matrix         | Duplex matrix              |
+| Matrix with shift register | rktk-drivers-common | keyscan/shift_register_matrix | Matrix with shift register |
+
+:::
