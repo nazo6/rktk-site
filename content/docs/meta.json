@@ -8,9 +8,11 @@
     "guide-first-keyboard",
     "guide-driver",
     "---Customization---",
-    "keymap",
+    "customize-keymap",
     "---Reference---",
-    "device",
-    "platform"
+    "reference-project-overview",
+    "reference-features",
+    "reference-device",
+    "reference-platform"
   ]
 }
