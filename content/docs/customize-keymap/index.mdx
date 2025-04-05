@@ -4,6 +4,8 @@ title: Keymap
 
 'Keymap' is Rust struct passed to `rktk::task::start`. You can see definition at [docs](https://rktk-docs.nazo6.dev/rktk/config/keymap/type.Keymap.html).
 
+## Keymap by example
+
 Let's look at each item using the example below.
 
 ```rust
@@ -39,11 +41,11 @@ async fn main() {
 
 ```
 
-## Prelude
+### Prelude
 
-The first line imports prelude. This imports many items that are commonly used in keymap.
+The first line imports prelude. This imports many items that are commonly used in keymap. You can see full list of prelude [here](https://rktk-docs.nazo6.dev/rktk/config/keymap/prelude/index.html)
 
-## KeyAction
+### KeyAction
 
 Next, we define a key called L2SPC. Since the keymap is just an array, we can define the key using Rust.
 
@@ -52,7 +54,7 @@ The action used in this key definition is the `TapHold` Action. This action has 
 
 [KeyAction](https://rktk-docs.nazo6.dev/rktk/config/keymap/prelude/enum.KeyAction.html)
 
-## Keycode
+### Keycode
 
 A keycode is a unit of key. For clarity, they are classified as enums, and `KeyCode::Key` is a so-called “normal key”. In other words, the first key is the normal Enter key.
 
@@ -62,7 +64,7 @@ The next key is designated as `KeyCode::Layer`. This represents a key related to
 
 From what we have seen so far, we know that L2SPC is a “tap to Enter, hold to Activate Layer 2” key.
 
-## Keymap
+### Keymap
 
 And finally, the overall Keymap is defined. The so-called per-layer keymap is defined as an array in the `layers` field.
 

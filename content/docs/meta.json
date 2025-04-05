@@ -4,7 +4,6 @@
   "pages": [
     "---Guide---",
     "index",
-    "guide-setup",
     "guide-first-keyboard",
     "guide-driver",
     "---Customization---",
@@ -13,6 +12,7 @@
     "reference-project-overview",
     "reference-features",
     "reference-device",
-    "reference-platform"
+    "reference-platform",
+    "reference-tips"
   ]
 }
